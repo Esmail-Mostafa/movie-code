@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div class=" container">
+<div class="row">
+    <div class="col-md-4 mt-5">
+        
+<div class="topline my-3"> </div>
+    <h2>trending Movies to watch right now</h2>
+    <p>Most watched Movies by days</p>
+<div class="downline"></div>
+
+    </div>
+    <div *ngFor = 'let movie of trendingMovies'class= "  col-md-2">
+        <a [routerLink]='["/moviedetails" , movie.id]'> <img class="w-100 position-relative " [src]="prfiximg+movie.poster_path" alt="movie.title " >
+            <div class="titles">
+                {{movie.vote_average | number:'1.0-1'}}
+            </div>
+    <h6>{{movie.title}}</h6></a>
+       
+    </div>
+</div>
+</div>
+<div class=" container">
+    <div class="row">
+        <div class="col-md-4 mt-5">
+            
+    <div class="topline my-3"> </div>
+        <h2>trending tv to watch right now</h2>
+        <p>Most watched tv by days</p>
+    <div class="downline"></div>
+    
+        </div>
+        <div *ngFor = 'let tvShow of tvShow'class= "col-md-2">
+            <a [routerLink]='["/tvshowdetails" , tvShow.id]'> <img class="w-100" [src]="prfiximg+tvShow.poster_path" alt="tvShow.title" >
+                <div class="titles">
+                    {{tvShow.vote_average | number:'1.0-1'}}
+                </div></a>
+           
+    <h6>{{tvShow.title}}</h6>
+  
+        </div>
+    </div>
+
+    <div class=" container">
+        <div class="row">
+            <div class="col-md-4 mt-5">
+                
+        <div class="topline my-3"> </div>
+            <h2>trending peaple to watch right now</h2>
+            <p>Most watched peaple by days</p>
+        <div class="downline"></div>
+        
+            </div>
+            <div *ngFor = 'let person of person'class= "  col-md-2">
+                <img class="w-100 position-relative " [src]="prfiximg+person.profile_path" alt="person.name" >
+        <h6>{{person.name}}</h6>
+       
+            </div>
+        </div>
+        </div>
+                                        

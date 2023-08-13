@@ -1,0 +1,66 @@
+<div class="container p-5">
+  <div class="row">
+    <div class="m-auto py-5 w-50">
+      <div *ngIf="error" class="alert alert-danger">
+        <p>{{ error }}</p>
+      </div>
+      <form
+        [formGroup]="loginform"
+        (ngSubmit)="submitloginform(loginform)"
+        class="card p-3"
+        style="background-color: #5c5a5a3d; border-radius: 8px"
+      >
+        <div class="form-group">
+          <label for="email"> email</label>
+          <input
+            formControlName="email"
+            class="form-control"
+            type="email"
+            id=" email"
+          />
+          <div
+            *ngIf="
+              loginform.get('email')?.errors != null &&
+              loginform.get('email')?.touched
+            "
+            class="alert-danger my-1 mx-3"
+          >
+            <p *ngIf="loginform.get('email')?.errors?.['required']">
+              email is required
+            </p>
+            <p *ngIf="loginform.get('email')?.errors?.['email']">
+              email is not valid
+            </p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password"> password</label>
+          <input
+            formControlName="password"
+            class="form-control"
+            type="password"
+            id=" password"
+          />
+          <div
+            *ngIf="
+              loginform.get('password')?.errors != null &&
+              loginform.get('password')?.touched
+            "
+            class="alert-danger my-1 mx-3"
+          >
+            <p *ngIf="loginform.get('password')?.errors?.['required']">
+              password is required
+            </p>
+          </div>
+        </div>
+        <button
+          [disabled]="loginform.invalid"
+          class="btn btn-info mt-3"
+          type="submit"
+        >
+          login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

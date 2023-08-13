@@ -1,0 +1,132 @@
+<!-- <nav class="navbar navbar-expand-lg fixed-top">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a *ngIf="islogin" class="nav-link" routerLink="home">home</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="islogin" class="nav-link" routerLink="about">about</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="islogin" class="nav-link" routerLink="movies">movies</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="islogin" class="nav-link" routerLink="tvshow">tvshow</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="islogin" class="nav-link" routerLink="network">network</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="icon">
+    <i class="fab fa-facebook-square mx-2"></i>
+    <i class="fab fa-instagram-squaremx-2"></i>
+    <i class="fab fa-spotify mx-2"></i>
+    <i class="fab fa-youtube mx-2"></i>
+    <i class="fab fa-instagram mx-2"></i>
+  </div>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a *ngIf="islogin" class="nav-link" routerLink="home">home</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="islogin" class="nav-link" routerLink="about">about</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="islogin" class="nav-link" routerLink="movies">movies</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="islogin" class="nav-link" routerLink="tvshow">tvshow</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="islogin" class="nav-link" routerLink="network">network</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="!islogin" class="nav-link" routerLink="login">login</a>
+    </li>
+    <li class="nav-item">
+      <a
+        *ngIf="islogin"
+        class="nav-link"
+        routerLink="logout"
+        (click)="islogOut()"
+        >logout</a
+      >
+    </li>
+    <li class="nav-item">
+      <a *ngIf="!islogin" class="nav-link" routerLink="regstratin"
+        >regstratin</a
+      >
+    </li>
+  </ul>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <h6 class="navbar-brand">Movie</h6>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item mt-2">
+        <div class="icon">
+          <i class="fab fa-facebook-square mx-2"></i>
+          <i class="fab fa-instagram-squaremx-2"></i>
+          <i class="fab fa-spotify mx-2"></i>
+          <i class="fab fa-youtube mx-2"></i>
+          <i class="fab fa-instagram mx-2"></i>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="!islogin" class="nav-link" routerLink="login">login</a>
+      </li>
+      <li class="nav-item">
+        <a
+          *ngIf="islogin"
+          class="nav-link"
+          routerLink="logout"
+          (click)="islogOut()"
+          >logout</a
+        >
+      </li>
+      <li class="nav-item">
+        <a *ngIf="!islogin" class="nav-link" routerLink="regstratin"
+          >regstratin</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

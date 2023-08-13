@@ -1,0 +1,147 @@
+<div class="container p-5">
+  <div class="row">
+    <div class="m-auto py-5 w-50">
+      <div *ngIf="error" class="alert alert-danger">
+        <p>{{ error }}</p>
+      </div>
+      <form
+        [formGroup]="Regstratinform"
+        (ngSubmit)="submitRegstratinform(Regstratinform)"
+        class="card p-3"
+        style="background-color: #5c5a5a3d; border-radius: 8px"
+      >
+        <div class="form-group">
+          <label for="name"> first Name</label>
+          <input
+            formControlName="first_name"
+            class="form-control"
+            type="text"
+            id="first_name"
+          />
+          <div
+            *ngIf="
+              Regstratinform.get('first_name')?.errors != null &&
+              Regstratinform.get('first_name')?.touched
+            "
+            class="alert-danger my-2"
+          >
+            <p *ngIf="Regstratinform.get('first_name')?.errors?.['required']">
+              first Name is required
+            </p>
+            <p *ngIf="Regstratinform.get('first_name')?.errors?.['minLength']">
+              Min Length is menimlenth is 3
+            </p>
+            <p *ngIf="Regstratinform.get('first_name')?.errors?.['maxLength']">
+              Max Lengthis maxlenth 15
+            </p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="name"> last Name</label>
+          <input
+            formControlName="last_name"
+            class="form-control"
+            type="text"
+            id="last_name"
+          />
+          <div
+            *ngIf="
+              Regstratinform.get('last_name')?.errors != null &&
+              Regstratinform.get('last_name')?.touched
+            "
+            class="alert-danger my-2"
+          >
+            <p *ngIf="Regstratinform.get('last_name')?.errors?.['required']">
+              last Name is required
+            </p>
+            <p *ngIf="Regstratinform.get('last_name')?.errors?.['minLength']">
+              last Name is menimlenth is 3
+            </p>
+            <p *ngIf="Regstratinform.get('last_name')?.errors?.['maxLength']">
+              last Name is maxlenth 10
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email"> email</label>
+          <input
+            formControlName="email"
+            class="form-control"
+            type="email"
+            id=" email"
+          />
+          <div
+            *ngIf="
+              Regstratinform.get('email')?.errors != null &&
+              Regstratinform.get('email')?.touched
+            "
+            class="alert-danger my-2"
+          >
+            <p *ngIf="Regstratinform.get('email')?.errors?.['required']">
+              email is required
+            </p>
+            <p *ngIf="Regstratinform.get('email')?.errors?.['email']">
+              email is not valid
+            </p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password"> password</label>
+          <input
+            formControlName="password"
+            class="form-control"
+            type="password"
+            id=" password"
+          />
+          <div
+            *ngIf="
+              Regstratinform.get('password')?.errors != null &&
+              Regstratinform.get('password')?.touched
+            "
+            class="alert-danger my-2"
+          >
+            <p *ngIf="Regstratinform.get('password')?.errors?.['required']">
+              is required
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password"> age</label>
+          <input
+            formControlName="age"
+            class="form-control"
+            type="age"
+            id=" age"
+          />
+          <div
+            *ngIf="
+              Regstratinform.get('age')?.errors != null &&
+              Regstratinform.get('age')?.touched
+            "
+            class="alert-danger my-1"
+          >
+            <p *ngIf="Regstratinform.get('age')?.errors?.['required']">
+              is required
+            </p>
+            <p *ngIf="Regstratinform.get('age')?.errors?.['min']">
+              min age is 12
+            </p>
+            <p *ngIf="Regstratinform.get('age')?.errors?.['max']">
+              max age is 80
+            </p>
+          </div>
+        </div>
+
+        <button
+          [disabled]="Regstratinform.invalid"
+          class="btn btn-info my-2 mx-3"
+          type="submit"
+        >
+          Regstratin
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

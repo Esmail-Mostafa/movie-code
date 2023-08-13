@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import '~node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel.scss';
+@import '~node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default.scss';
+$bgColoer:#131722;
+$lightBgcoloer:#24baef;
+$BgTransparent:rgba(36,186,239,.6);
+$fontCColoer:#fff;
+$borderColoer:#a8a8a83d;
+$bordeHeigh:1px;
+$secondFontcoloer:#949cb0;
+body{
+
+    background-color: $bgColoer;
+    color:$fontCColoer ;
+    
+    font-family: 'Montserrat Alternates', sans-serif;
+   
+}
+
+a{
+    font-size: 18px;
+    color: $fontCColoer;
+    text-decoration: none;
+}
+a:hover
+{
+    font-size: 18px;
+    color: $fontCColoer;
+    text-decoration: none;
+}
+.topline{
+width: 25%;
+height: 2px;
+background-color: $borderColoer;
+
+}
+.downline{
+    width: 75%;
+height: 2px;
+background-color: $borderColoer;
+position: absolute;
+bottom: 50px;
+}
+.titles
+{
+    width: 30px;
+    height: 40px;
+    background-color: $BgTransparent;
+    position: absolute;
+    top: 0;
+   right: 30px;
+}
+.frist{
+
+    background-image: url(../../page1/src/assets/207537.jpg);
+    background-size: 100vh;
+    background-size: cover;
+}
